@@ -4,5 +4,5 @@ local function setup_keybinding()
 end
 
 return {
-    setup = setup_keybinding
+    init = setup_keybinding
 }

@@ -14,11 +14,13 @@ local function lazy_nvim_bootstrap()
 end
 
 local function lazy_nvim_install_plugins()
-    local pluginList = require("plugins.plugins")
+    local pluginList = require("plugins.list")
     local lazy = require("lazy")
 
     -- Setup lazy loading plugins
-    lazy.setup(pluginList)
+    lazy.setup(pluginList.all(), {
+        defaults = { lazy = false }
+    })
 end
 
 return {

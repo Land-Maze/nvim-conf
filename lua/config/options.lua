@@ -1,4 +1,4 @@
-local function setup_basic_config()
+local function setup_options_config()
     -- Syntax highlight
     vim.cmd('syntax on')
 
@@ -13,11 +13,8 @@ local function setup_basic_config()
 
     -- Mouse support
     vim.opt.mouse = 'a'
-
-    -- Colorscheme
-    vim.cmd('colorscheme darkblue')
 end
 
 return {
-    setup = setup_basic_config
+    init = setup_options_config
 }
