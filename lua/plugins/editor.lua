@@ -8,7 +8,11 @@ return {
                 config = function()
                     require("telescope").load_extension("file_browser")
                 end,
+            },
+            {
+                "nvim-lua/plenary.nvim"
             }
-        }
+        },
+	      keys = require("plugins.config.editor").telescope.get_keys()
     }
 }
