@@ -9,3 +9,8 @@ require("config.basic").setup()
 
 -- Import vim keybindings
 require("config.keybinding").setup()
+
+-- Plugin manager
+local plugin_manager = require("plugins.init")
+plugin_manager.bootstrap()
+plugin_manager.install_plugins()
