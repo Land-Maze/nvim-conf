@@ -26,5 +26,9 @@ return {
             }
         },
 	      keys = require("plugins.config.editor").telescope.get_keys()
+    },
+    {
+      "stevearc/dressing.nvim",
+      event = "VeryLazy",
     }
 }

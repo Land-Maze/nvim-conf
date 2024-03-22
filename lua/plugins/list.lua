@@ -1,8 +1,8 @@
 local function get_all_plugins()
     local colorschemeList = require("plugins.colorscheme")
     local editorList = require("plugins.editor")
-    local miscList = require("plugins.misc")
-      
+    local miscList = require("plugins.misc")  
+    local miscLSP = require("plugins.lsp")
 
     local combinedList = {}
 
@@ -15,6 +15,10 @@ local function get_all_plugins()
     end	
 
     for _, value in ipairs(miscList) do
+        table.insert(combinedList, value)
+    end
+
+    for _, value in ipairs(miscLSP) do
         table.insert(combinedList, value)
     end
 
