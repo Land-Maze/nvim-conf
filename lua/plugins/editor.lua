@@ -38,4 +38,32 @@ return {
 			require("lualine").setup()
 		end,
 	},
+	{
+		"akinsho/bufferline.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		version = "*",
+		opts = {
+			options = {
+				mode = "tabs",
+				separator_style = "slant",
+			},
+		},
+	},
+	{
+		"yamatsum/nvim-cursorline",
+		config = function()
+			require("nvim-cursorline").setup({
+				cursorline = {
+					enable = true,
+					timeout = 300,
+					number = false,
+				},
+				cursorword = {
+					enable = true,
+					min_length = 3,
+					hl = { underline = true },
+				},
+			})
+		end,
+	},
 }
