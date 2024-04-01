@@ -18,6 +18,7 @@ return {
 					markdown = { "prettier" },
 					lua = { "stylua" },
 					python = { "isort", "black" },
+					astro = { "prettier" },
 				},
 				format_on_save = {
 					lsp_fallback = true,
@@ -34,6 +35,7 @@ return {
 			local lint = require("lint")
 
 			lint.linters_by_ft = {
+				astro = { "eslint_d" },
 				javascript = { "eslint_d" },
 				typescript = { "eslint_d" },
 				javascriptreact = { "eslint_d" },

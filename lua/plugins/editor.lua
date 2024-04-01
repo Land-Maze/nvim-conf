@@ -22,7 +22,21 @@ return {
 			{
 				"nvim-lua/plenary.nvim",
 				{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
-				"nvim-tree/nvim-web-devicons",
+				{
+					"nvim-tree/nvim-web-devicons",
+					config = function()
+						require("nvim-web-devicons").setup({
+							strict = true,
+							override_by_extension = {
+								astro = {
+									icon = "󱎯",
+									color = "#EF8547",
+									name = "astro",
+								},
+							},
+						})
+					end,
+				},
 			},
 		},
 		keys = require("plugins.config.editor").telescope.get_keys(),
@@ -105,5 +119,28 @@ return {
 	},
 	{
 		"github/copilot.vim",
+	},
+	{
+		"nvim-treesitter/nvim-treesitter",
+		config = function()
+			require("nvim-treesitter.configs").setup({
+				auto_install = false,
+				disable = function(lang, buf)
+					local max_filesize = 100 * 1024 -- 100 KB
+					local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+					if ok and stats and stats.size > max_filesize then
+						return true
+					end
+				end,
+				highlight = {
+					enable = true,
+					disable = {},
+				},
+				indent = {
+					enable = true,
+				},
+				ensure_installed = require("plugins.config.editor").treesitter.get_list_parser(),
+			})
+		end,
 	},
 }

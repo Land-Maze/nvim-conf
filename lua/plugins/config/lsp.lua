@@ -35,6 +35,15 @@ function M.mason.get_language_servers()
 		"pyright",
 		"prismals",
 		"eslint",
+		"jsonls",
+		"marksman",
+		"yamlls",
+		"dockerls",
+		"docker_compose_language_service",
+		"clangd",
+		"bashls",
+		"astro",
+		"vimls",
 	}
 end
 
@@ -143,6 +152,56 @@ function M.lspconfig.setup_lsp_servers(on_attach, capabilities)
 	})
 
 	lspconfig["prismals"].setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+	})
+
+	lspconfig["eslint"].setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+	})
+
+	lspconfig["jsonls"].setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+	})
+
+	lspconfig["marksman"].setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+	})
+
+	lspconfig["yamlls"].setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+	})
+
+	lspconfig["dockerls"].setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+	})
+
+	lspconfig["docker_compose_language_service"].setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+	})
+
+	lspconfig["clangd"].setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+	})
+
+	lspconfig["bashls"].setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+	})
+
+	lspconfig["astro"].setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+	})
+
+	lspconfig["vimls"].setup({
 		on_attach = on_attach,
 		capabilities = capabilities,
 	})
