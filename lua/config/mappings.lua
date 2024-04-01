@@ -10,7 +10,7 @@ local function setup_mappings()
 	map("v", "<A-Up>", ":m '<-2<cr>gv=gv", { desc = "Move up" })
 
 	-- new file
-	map("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New File" })
+	map("n", "<Leader>fn", "<cmd>enew<cr>", { desc = "New File" })
 
 	-- better indenting
 	map("v", "<", "< gv")
@@ -29,10 +29,10 @@ local function setup_mappings()
 	map("n", "<C-l>", "<C-w>l", { desc = "Go to right window", remap = true })
 
 	-- Resize window using <ctrl> arrow keys
-	map("n", "∆", "<cmd>resize +2<cr>", { desc = "Increase window height" })
-	map("n", "˚", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
-	map("n", "˙", "<cmd>vertical resize -2<cr>", { desc = "Decrease window width" })
-	map("n", "¬", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })
+	map("n", "<Leader>ih", "<cmd>resize +4<cr>", { desc = "Increase window height" })
+	map("n", "<Leader>dh", "<cmd>resize -4<cr>", { desc = "Decrease window height" })
+	map("n", "<Leader>dw", "<cmd>vertical resize -6<cr>", { desc = "Decrease window width" })
+	map("n", "<leader>iw", "<cmd>vertical resize +6<cr>", { desc = "Increase window width" })
 	map("n", "<Leader>=", "<C-w>=", { desc = "Set all window to same size." })
 
 	-- buffers
