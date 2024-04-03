@@ -35,7 +35,7 @@ local function setup_options_config()
 	vim.opt.ignorecase = true
 	vim.opt.smartcase = true
 	vim.opt.undofile = true
-	vim.opt.showtabline = 1
+	vim.opt.showtabline = 2
 	vim.opt.list = true
 end
 

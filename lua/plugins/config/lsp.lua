@@ -99,9 +99,9 @@ end
 function M.lspconfig.get_signs()
 	return {
 		Error = "⍉ ",
-		Warn = "¶ ",
-		Hint = "➔ ",
-		Info = "i ",
+		Warn = " ",
+		Hint = " ",
+		Info = " ",
 	}
 end
 
