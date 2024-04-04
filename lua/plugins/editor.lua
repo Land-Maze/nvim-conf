@@ -160,7 +160,6 @@ return {
 				main_image = "language",
 				show_time = true,
 				global_time = false,
-				enable_line_number = true,
 
 				editing_text = "Editing %s",
 				file_explorer_text = "Browsing in files (%s)",
