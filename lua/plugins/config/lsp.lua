@@ -44,6 +44,7 @@ function M.mason.get_language_servers()
 		"bashls",
 		"astro",
 		"vimls",
+		"arduino_language_server",
 	}
 end
 
@@ -202,6 +203,11 @@ function M.lspconfig.setup_lsp_servers(on_attach, capabilities)
 	})
 
 	lspconfig["vimls"].setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+	})
+
+	lspconfig["arduino_language_server"].setup({
 		on_attach = on_attach,
 		capabilities = capabilities,
 	})

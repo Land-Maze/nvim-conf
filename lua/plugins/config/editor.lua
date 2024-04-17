@@ -39,6 +39,12 @@ function M.treesitter.get_list_parser()
 		"dockerfile",
 		"markdown",
 		"python",
+		"asm",
+		"nasm",
+		"tsx",
+		"fish",
+		"arduino",
+		"cpp",
 	}
 end
 

@@ -117,14 +117,6 @@ return {
 		},
 	},
 	{
-		"lukas-reineke/headlines.nvim",
-		opts = {
-			markdown = {
-				fat_headlines = true,
-			},
-		},
-	},
-	{
 		"github/copilot.vim",
 	},
 	{
@@ -144,6 +136,9 @@ return {
 					disable = {},
 				},
 				indent = {
+					enable = true,
+				},
+				autotag = {
 					enable = true,
 				},
 				ensure_installed = require("plugins.config.editor").treesitter.get_list_parser(),
@@ -171,5 +166,19 @@ return {
 				terminal_text = "Using Terminal",
 			})
 		end,
+	},
+	{
+		"windwp/nvim-ts-autotag",
+	},
+	{
+		"windwp/nvim-autopairs",
+		config = function()
+			require("nvim-autopairs").setup({
+				disable_filetype = { "TelescopePrompt", "vim" },
+			})
+		end,
+	},
+	{
+		"lewis6991/gitsigns.nvim",
 	},
 }
